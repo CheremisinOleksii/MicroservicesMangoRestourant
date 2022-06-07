@@ -19,6 +19,7 @@ using Microsoft.IdentityModel.Tokens;
 
 using Mango.Services.ShoppingCartApi.DbContexts;
 using Mango.Services.ShoppingCartApi.Repository;
+using Mango.MessageBus;
 
 namespace Mango.Services.ShoppingCartApi
 {
@@ -42,8 +43,12 @@ namespace Mango.Services.ShoppingCartApi
             services.AddSingleton(mapper);
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddSingleton<IMessageBus, AzureServiceBusMessageBus>();
 
             services.AddControllers();
+
+            services.AddHttpClient<ICouponRepository, CouponRepository>(u => u.BaseAddress =
+            new Uri(Configuration["ServiceUrls.CouponApi"]));
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
