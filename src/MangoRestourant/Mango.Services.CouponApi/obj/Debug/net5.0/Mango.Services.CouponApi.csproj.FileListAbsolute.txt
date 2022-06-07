@@ -12,7 +12,6 @@ C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoR
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\Mango.Services.CouponApi.runtimeconfig.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\Mango.Services.CouponApi.runtimeconfig.dev.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\Mango.Services.CouponApi.dll
-C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\ref\Mango.Services.CouponApi.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\Mango.Services.CouponApi.pdb
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
@@ -65,3 +64,4 @@ C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoR
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\obj\Debug\net5.0\ref\Mango.Services.CouponApi.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\obj\Debug\net5.0\Mango.Services.CouponApi.pdb
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\obj\Debug\net5.0\Mango.Services.CouponApi.genruntimeconfig.cache
+C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.CouponApi\obj\Debug\net5.0\refint\Mango.Services.CouponApi.dll

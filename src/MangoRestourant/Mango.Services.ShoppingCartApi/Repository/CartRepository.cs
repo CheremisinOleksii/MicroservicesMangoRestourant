@@ -61,23 +61,21 @@ namespace Mango.Services.ShoppingCartApi.Repository
                 await  dbContext.SaveChangesAsync();
             }
 
-            var dbCartHeader = await dbContext.CartHeaders.AsNoTracking().FirstOrDefaultAsync(
-                h => h.UserId == cart.CartHeader.UserId);
+            var dbCartHeader = await dbContext.CartHeaders.AsNoTracking()
+                .FirstOrDefaultAsync(h => h.UserId == cart.CartHeader.UserId);
 
             if (dbCartHeader == null)
             {
-
                 dbContext.CartHeaders.Add(cart.CartHeader);
                 await dbContext.SaveChangesAsync();
                 cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.CartHeaderId;
                 cart.CartDetails.FirstOrDefault().Product = null;
                 dbContext.CartDetails.Add(cart.CartDetails.FirstOrDefault());
                 await dbContext.SaveChangesAsync();
-
             }
             else {
 
-                var dbcartDetails  = await dbContext.CartDetails.AsNoTracking().FirstOrDefaultAsync(
+                var dbcartDetails = await dbContext.CartDetails.AsNoTracking().FirstOrDefaultAsync(
                     u => u.ProductId == cart.CartDetails.FirstOrDefault().ProductId
                     && u.CartHeaderId == dbCartHeader.CartHeaderId);
 
@@ -92,6 +90,8 @@ namespace Mango.Services.ShoppingCartApi.Repository
                 {
                     cart.CartDetails.FirstOrDefault().Product = null;
                     cart.CartDetails.FirstOrDefault().Count += dbcartDetails.Count;
+                    cart.CartDetails.FirstOrDefault().CartDetailsId = dbcartDetails.CartDetailsId;
+                    cart.CartDetails.FirstOrDefault().CartHeaderId = dbcartDetails.CartHeaderId;
                     dbContext.CartDetails.Update(cart.CartDetails.FirstOrDefault());
                    await dbContext.SaveChangesAsync();
                 }

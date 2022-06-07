@@ -5,7 +5,6 @@ C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoR
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\Mango.Web.runtimeconfig.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\Mango.Web.runtimeconfig.dev.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\Mango.Web.dll
-C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\ref\Mango.Web.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\Mango.Web.pdb
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -370,3 +369,4 @@ C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoR
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\obj\Debug\net5.0\Razor\Views\Cart\CartIndex.cshtml.g.cs
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\obj\Debug\net5.0\Razor\Views\Cart\Checkout.cshtml.g.cs
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\obj\Debug\net5.0\Razor\Views\Cart\Confirmation.cshtml.g.cs
+C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Web\obj\Debug\net5.0\refint\Mango.Web.dll

@@ -1,4 +1,5 @@
-﻿using Mango.Services.ShoppingCartApi.Messages;
+﻿using Mango.MessageBus;
+using Mango.Services.ShoppingCartApi.Messages;
 using Mango.Services.ShoppingCartApi.Model.Dto;
 using Mango.Services.ShoppingCartApi.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +15,16 @@ namespace Mango.Services.ShoppingCartApi.Controllers
     public class ShoppingCartController : Controller
     {
         private readonly ICartRepository repository;
+        private readonly ICouponRepository couponRepository;
+        private readonly IMessageBus messageBus;
         protected ResponseDto response;
 
-        public ShoppingCartController(ICartRepository repository)
+        public ShoppingCartController(ICartRepository repository, IMessageBus messageBus, ICouponRepository couponRepository)
         {
             this.repository = repository;
+            this.messageBus = messageBus;
             this.response = new ResponseDto();
+            this.couponRepository = couponRepository;   
         }
 
         [HttpGet("GetCart/{userId}")]
@@ -123,18 +128,32 @@ namespace Mango.Services.ShoppingCartApi.Controllers
         }
 
         [HttpPost("Checkout")]
-        public async Task<object> Checkout(CheckoutHeaderDto checkoutHeaderDto)
+        public async Task<object> Checkout(CheckoutHeaderDto checkoutHeader)
         {
             try
             {
-                CartDto cartDto = await repository.GetCartByUserId(checkoutHeaderDto.UserId);
+                CartDto cartDto = await repository.GetCartByUserId(checkoutHeader.UserId);
 
                 if (cartDto == null)
                     return BadRequest();
 
-                checkoutHeaderDto.CartDetails = cartDto.CartDetails.ToList();
-                
+                if (!string.IsNullOrEmpty(checkoutHeader.CouponCode))
+                {
+                    CouponDto coupon = await couponRepository.GetCoupon(checkoutHeader.CouponCode);
+
+                    if (checkoutHeader.DiscountTotal != coupon.DiscountAmount) {
+                        response.IsSuccess = true;
+                        response.ErrorMessages = new List<string>() {"Coupon price has changed, please confirm." };
+                        response.DisplayMessage = "Coupon price has changed, please confirm.";
+                        return response;
+                    }
+                }
+
+                checkoutHeader.CartDetails = cartDto.CartDetails.ToList();
+
                 //add logic for message queue
+                messageBus.PublishMessage(checkoutHeader, "checkoutMessageTopic");
+
             }
             catch (Exception ex)
             {

@@ -6,7 +6,6 @@ C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoR
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\Mango.Services.Identity.runtimeconfig.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\Mango.Services.Identity.runtimeconfig.dev.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\Mango.Services.Identity.dll
-C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\ref\Mango.Services.Identity.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\Mango.Services.Identity.pdb
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -409,3 +408,4 @@ C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoR
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\obj\Debug\net5.0\Mango.Services.Identity.genruntimeconfig.cache
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\bin\Debug\net5.0\keys\is-signing-key-F74AC0DDDC5C0B17D8DD72F689443230.json
 C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\oleksii.cheremisin\source\repos\MicroservicesMangoRestourant\src\MangoRestourant\Mango.Services.Identity\obj\Debug\net5.0\refint\Mango.Services.Identity.dll
