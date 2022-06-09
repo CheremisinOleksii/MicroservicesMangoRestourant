@@ -16,6 +16,7 @@ using Microsoft.IdentityModel.Tokens;
 using Mango.Services.OrderApi.Repository;
 using Mango.Services.OrderApi.Messaging;
 using Mango.Services.OrderApi.Extensions;
+using Mango.MessageBus;
 
 namespace Mango.Services.OrderApi
 {
@@ -38,7 +39,8 @@ namespace Mango.Services.OrderApi
             var optionBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
             optionBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"));
             services.AddSingleton(new OrderRepository(optionBuilder.Options));
-            services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
+            services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumerOrder>();
+            services.AddSingleton<IMessageBus, AzureServiceBusMessageBus>();
 
             services.AddControllers();
 
