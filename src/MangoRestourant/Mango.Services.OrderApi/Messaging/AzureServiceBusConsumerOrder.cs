@@ -40,7 +40,7 @@ namespace Mango.Services.OrderApi.Messaging
             var client = new ServiceBusClient(serviceBusConnectionString);
             
             serviceBusProcessor = client.CreateProcessor(checkoutMessageTopic, checkoutSubscriptionName);
-            orderUpdatePaymentProcessor = client.CreateProcessor(orderUpdatePaymentResultTopic, checkoutSubscriptionName)    
+            orderUpdatePaymentProcessor = client.CreateProcessor(orderUpdatePaymentResultTopic, checkoutSubscriptionName);    
 
         }
 
@@ -118,7 +118,8 @@ namespace Mango.Services.OrderApi.Messaging
                 CardNumber = orderHeader.CardNumber,
                 CVV = orderHeader.CVV,
                 ExpirityMonthYear = orderHeader.ExpirityMonthYear,
-                OrderId = orderHeader.OrderHeaderId
+                OrderId = orderHeader.OrderHeaderId,
+                Email = orderHeader.Email
             };
 
             try
