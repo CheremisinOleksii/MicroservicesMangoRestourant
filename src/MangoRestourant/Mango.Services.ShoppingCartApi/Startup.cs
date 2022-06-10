@@ -47,8 +47,9 @@ namespace Mango.Services.ShoppingCartApi
 
             services.AddControllers();
 
-            services.AddHttpClient<ICouponRepository, CouponRepository>(u => u.BaseAddress =
-            new Uri(Configuration["ServiceUrls.CouponApi"]));
+            services.AddHttpClient<ICouponRepository, CouponRepository>(u =>               
+                u.BaseAddress = new Uri(Configuration["ServiceUrl:CouponApi"])
+             );
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
